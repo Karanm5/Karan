@@ -1,0 +1,13 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2 {
+  margin-bottom: 30px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.15);
+}

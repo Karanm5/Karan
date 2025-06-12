@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Karan</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Karan</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="bg-primary text-white text-center py-5">
+    <div class="container">
+      <h1 class="display-4">Hi, I'm Karan</h1>
+      <p class="lead">Data Analyst | ML Engineer </p>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <h2 class="text-center">About Me</h2>
+      <p class="text-center">
+        <p>
+            I am a data professional with a Master’s in Data Analytics (Distinction) from Aston University, where I specialized in <strong>statistical modeling</strong> and <strong>machine learning</strong>. My research journey—from analyzing superconductivity through stochastic ML to designing secure cloud architectures—has instilled a dual focus: <em>technical rigor</em> in building systems and <em>critical inquiry</em> into their societal implications.
+          </p>
+  
+          <p>
+            Currently, I am working toward becoming a <strong>Data Scientist/Engineer</strong>, leveraging tools like Python, SQL, and TensorFlow to design scalable data pipelines and ML models. My long-term vision is to contribute to <strong>advancing machine learning</strong>, particularly in stochastic modeling and neural networks, while ensuring these technologies serve equitable outcomes.
+          </p>
+  
+          <div class="bg-white p-4 rounded shadow-sm my-4">
+            <h5 class="text-center mb-3">Research & Industry Perspective</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <strong>Technical Depth</strong>: Built ETL systems (40% efficiency gains), time-series forecasting models (RNNs), and NLP applications, grounded in coursework like <em>Probabilistic Modeling</em> and <em>Statistical ML</em>.
+              </li>
+              <li class="mb-2">
+                <strong>Interdisciplinary Lens</strong>: My dissertation on superconductivity blended physics with ML, while projects like cloud security (DROPS) and astrophysics analysis reflect my ability to bridge domains.
+              </li>
+              <li>
+                <strong>Deployment Focus</strong>: As a Data Analyst at Giga-Tasking, I translated models into Tableau dashboards and automated workflows, emphasizing <u>actionable</u> insights.
+              </li>
+            </ul>
+          </div>
+    </p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+<section id="projects" class="bg-light py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">Projects</h2>
+    <div class="row g-4">
+
+      <!-- Project 1: Dissertation -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Dissertation: Superconductivity and Disorder</h5>
+            <p class="text-muted">
+              Aston University | 2024<br>
+              <strong>Supervisor:</strong> Professor Igor Yurkevich<br>
+              <span class="badge bg-success mt-1">Distinction Achieved</span>
+            </p>
+            <p class="card-text">
+              Investigated the impact of disorder on superconductors critical temperatures using stochastic ML models. 
+              Created datasets simulating random vs. structured conditions to analyze thermal behavior.
+            </p>
+            <a href="files/Karan_230293944_Final_dissertation.pdf" class="btn btn-outline-primary btn-sm me-2" download>
+              <i class="bi bi-file-earmark-pdf"></i> dissertation file
+            </a>
+            <a href="https://github.com/Karanm5/Superconductivity-and-Disorder" target="_blank" class="btn btn-outline-dark btn-sm">
+              <i class="bi bi-github"></i> View on github
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2: DROPS -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Security and Performance Optimization in Cloud Data Storage</h5>
+            <p class="text-muted">
+              Netaji Subhas Institute of Technology<br>
+              <strong>Supervisor:</strong> Dr. Amarjit
+            </p>
+            <p class="card-text">
+              Introduced <strong>DROPS</strong>—a methodology for fragmenting and distributing data across multiple cloud nodes. 
+              Each node holds only a single fragment, ensuring enhanced security, fault tolerance, and optimized system performance.
+            </p>
+            <a href="https://github.com/Karanm5/File-Spilitting-DROPS-" target="_blank" class="btn btn-outline-primary">
+              View on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3: OpenCV Motion Detection -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Real-Time Motion Detection & Person Identification</h5>
+            <p class="text-muted">
+              Netaji Subhas Institute of Technology<br>
+              <strong>Supervisor:</strong> Dr. Vikas Maheshkar
+            </p>
+            <p class="card-text">
+              Built with <strong>OpenCV</strong>, this system detects motion and identifies individuals in real-time video streams. 
+              Events are timestamped and visualized with dynamic graphs, making it ideal for smart surveillance and anomaly detection.
+            </p>
+            <a href="https://github.com/Karanm5/Computer-Vision-old-program-" target="_blank" class="btn btn-outline-primary">
+              View on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- /.row -->
+  </div> <!-- /.container -->
+</section>
+
+
+  <!-- Contact Section -->
+<section id="contact" class="py-5">
+  <div class="container text-center">
+    <h2>Contact</h2>
+    <p>You can email me at <a href="mailto:meena.karan9k@gmail.com">Gmail</a></p>
+
+    <div class="mt-4 d-flex justify-content-center flex-wrap gap-3">
+      <a href="https://www.linkedin.com/in/karan-th/" target="_blank" class="btn btn-outline-primary">
+        <i class="bi bi-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://github.com/Karanm5" target="_blank" class="btn btn-outline-dark">
+        <i class="bi bi-github"></i> GitHub
+      </a>
+      <a href="files/Karan_CV.pdf" class="btn btn-outline-success" download>
+        <i class="bi bi-file-earmark-arrow-down"></i> Download CV
+      </a>
+    </div>
+  </div>
+</section>
+
+
+ <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p class="mb-0">&copy; 2025 KARAN. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
