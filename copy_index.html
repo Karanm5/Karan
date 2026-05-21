@@ -3,63 +3,202 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Karan</title>
+  <title>Karan | Data Engineer & ML Practitioner</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Inside <head> -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<style>
-  body {
-    font-family: 'Inter', sans-serif;
-  }
-  h1, h2, h5 {
-    font-weight: 700;
-  }
-  p, a, li {
-    font-weight: 400;
-  }
-  .card:hover {
-  transform: translateY(-5px);
-  transition: all 0.3s ease;
-  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.15);
-}
-</style>
-<!-- Add in <head> -->
-
-
-
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init();</script>
-
-<!-- Add before </body> -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init();</script>
-
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary-dark: #1a1a2e;
+      --primary-blue: #4361ee;
+      --accent-teal: #4cc9f0;
+      --text-light: #f8f9fa;
+      --text-muted: #6c757d;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #2d3436;
+      line-height: 1.7;
+    }
+    
+    h1, h2, h3, h5 {
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    
+    .section-title {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 2rem;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary-blue), var(--accent-teal));
+      border-radius: 2px;
+    }
+    
+    .hero-section {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, #16213e 100%);
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+    }
+    
+    .hero-subtitle {
+      color: var(--accent-teal);
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+    
+    .card {
+      border: none;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+    }
+    
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    }
+    
+    .project-card {
+      background: #fff;
+      border-left: 4px solid var(--primary-blue);
+    }
+    
+    .project-card.featured {
+      border-left-color: var(--accent-teal);
+    }
+    
+    .tech-badge {
+      background: #e9ecef;
+      color: #495057;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      margin: 0.2rem;
+      display: inline-block;
+    }
+    
+    .tech-badge.highlight {
+      background: linear-gradient(135deg, var(--primary-blue), var(--accent-teal));
+      color: white;
+    }
+    
+    .stat-card {
+      background: linear-gradient(135deg, var(--primary-dark), #16213e);
+      color: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--accent-teal);
+    }
+    
+    .philosophy-quote {
+      font-size: 1.25rem;
+      font-style: italic;
+      color: var(--text-muted);
+      border-left: 4px solid var(--accent-teal);
+      padding-left: 1.5rem;
+      margin: 2rem 0;
+    }
+    
+    .navbar-dark .navbar-nav .nav-link {
+      color: rgba(255,255,255,0.85);
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    
+    .navbar-dark .navbar-nav .nav-link:hover {
+      color: var(--accent-teal);
+    }
+    
+    .floating-buttons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+    
+    .floating-buttons a {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    
+    .certification-badge {
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+      transition: all 0.3s;
+    }
+    
+    .certification-badge:hover {
+      background: #e9ecef;
+      transform: scale(1.02);
+    }
+    
+    footer {
+      background: var(--primary-dark);
+    }
+    
+    .btn-gradient {
+      background: linear-gradient(135deg, var(--primary-blue), var(--accent-teal));
+      border: none;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: all 0.3s;
+    }
+    
+    .btn-gradient:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(67, 97, 238, 0.3);
+      color: white;
+    }
+  </style>
 </head>
 
-
-<!-- Add before </body> -->
-<div class="position-fixed bottom-0 end-0 m-3 d-flex flex-column gap-2">
-  <a href="https://github.com/Karanm5" class="btn btn-dark rounded-circle" target="_blank" title="GitHub">
-    <i class="bi bi-github"></i>
-  </a>
-  <a href="files/Karan_CV.pdf" class="btn btn-success rounded-circle" title="Download CV" download>
-    <i class="bi bi-download"></i>
-  </a>
-</div>
-
-
-
-
 <body>
+  <!-- Floating Buttons -->
+  <div class="floating-buttons d-flex flex-column">
+    <a href="https://github.com/Karanm5" class="btn btn-dark rounded-circle" target="_blank" title="GitHub">
+      <i class="bi bi-github"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/karan-th/" class="btn btn-primary rounded-circle" target="_blank" title="LinkedIn">
+      <i class="bi bi-linkedin"></i>
+    </a>
+    <a href="files/Karan_CV.pdf" class="btn btn-success rounded-circle" title="Download CV" download>
+      <i class="bi bi-download"></i>
+    </a>
+  </div>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background: rgba(26, 26, 46, 0.95); backdrop-filter: blur(10px);">
     <div class="container">
-      <a class="navbar-brand" href="#">Karan</a>
+      <a class="navbar-brand fw-bold" href="#">KARAN</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -67,6 +206,8 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+          <li class="nav-item"><a class="nav-link" href="#research">Research</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -74,201 +215,470 @@
   </nav>
 
   <!-- Hero Section -->
-  <header class="bg-primary text-white text-center py-5">
+  <header class="hero-section text-white">
     <div class="container">
-      <h1 class="display-4">Hi, I'm Karan</h1>
-      <p class="lead">Data Analyst | Data Engineer | ML Engineer </p>
+      <div class="row align-items-center">
+        <div class="col-lg-8" data-aos="fade-up">
+          <p class="hero-subtitle mb-3">Data Engineer · ML Practitioner · Researcher</p>
+          <h1 class="display-3 fw-bold mb-4">Building systems that transform data into decisions</h1>
+          <p class="lead mb-4" style="color: rgba(255,255,255,0.8);">
+            I design scalable data architectures and machine learning solutions that bridge the gap between raw information and actionable insight. Currently preparing research for arXiv publication.
+          </p>
+          <div class="d-flex gap-3 flex-wrap">
+            <a href="#projects" class="btn btn-gradient">View Projects</a>
+            <a href="files/Karan_CV.pdf" class="btn btn-outline-light" download>Download CV</a>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
+
+  <!-- Stats Section -->
+  <section class="py-4" style="background: #f8f9fa; margin-top: -30px; position: relative; z-index: 10;">
+    <div class="container">
+      <div class="row g-4" data-aos="fade-up">
+        <div class="col-6 col-md-3">
+          <div class="stat-card">
+            <div class="stat-number">MSc</div>
+            <div class="small">Distinction</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-card">
+            <div class="stat-number">5+</div>
+            <div class="small">Certifications</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-card">
+            <div class="stat-number">40%</div>
+            <div class="small">Efficiency Gains</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-card">
+            <div class="stat-number">50K+</div>
+            <div class="small">Daily Records Processed</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- About Section -->
   <section id="about" class="py-5">
     <div class="container">
-      <h2 class="text-center">About Me</h2>
-      <p class="text-center">
-        <p>
-            I am a data professional with a Master’s in Data Analytics (Distinction) from Aston University, where I specialized in <strong>statistical modeling</strong> and <strong>machine learning</strong>. My research journey—from analyzing superconductivity through stochastic ML to designing secure cloud architectures—has instilled a dual focus: <em>technical rigor</em> in building systems and <em>critical inquiry</em> into their societal implications.
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2 class="section-title" data-aos="fade-up">About</h2>
+          
+          <p class="philosophy-quote" data-aos="fade-up" data-aos-delay="100">
+            "The most interesting problems in data are not technical problems at all. They are problems of translation: how do we take the latent value buried in an organisation's data and surface it in ways that change how people think and act?"
           </p>
-  
-          <p>
-            Currently, I am working toward becoming a <strong>Data Scientist/Engineer</strong>, leveraging tools like Python, SQL, and TensorFlow to design scalable data pipelines and ML models. My long-term vision is to contribute to <strong>advancing machine learning</strong>, particularly in stochastic modeling and neural networks, while ensuring these technologies serve equitable outcomes.
-          </p>
-  
-          <div class="bg-white p-4 rounded shadow-sm my-4">
-            <h5 class="text-center mb-3">Research & Industry Perspective</h5>
-            <ul class="list-unstyled">
-              <li class="mb-2">
-                <strong>Technical Depth</strong>: Built ETL systems (40% efficiency gains), time-series forecasting models (RNNs), and NLP applications, grounded in coursework like <em>Probabilistic Modeling</em> and <em>Statistical ML</em>.
-              </li>
-              <li class="mb-2">
-                <strong>Interdisciplinary Lens</strong>: My dissertation on superconductivity blended physics with ML, while projects like cloud security (DROPS) and astrophysics analysis reflect my ability to bridge domains.
-              </li>
-              <li>
-                <strong>Deployment Focus</strong>: As a Data Analyst at Giga-Tasking, I translated models into Tableau dashboards and automated workflows, emphasizing <u>actionable</u> insights.
-              </li>
-            </ul>
+          
+          <div data-aos="fade-up" data-aos-delay="200">
+            <p>
+              I am a data professional with an <strong>MSc in Data Analytics (Distinction)</strong> from Aston University, where I specialised in statistical modelling, machine learning, and scalable data architecture. My work sits at the intersection of rigorous engineering and practical application: I build systems that are not merely technically elegant, but genuinely useful.
+            </p>
+            
+            <p>
+              My research journey has taken me from investigating superconductivity through stochastic machine learning to designing production-grade data platforms using medallion architecture. This dual orientation, academic rigour combined with commercial pragmatism, shapes how I approach every problem: with systematic methodology, clear documentation, and an unwavering focus on outcomes.
+            </p>
+            
+            <p>
+              I am currently preparing my dissertation research for <strong>arXiv publication</strong>, demonstrating my commitment to contributing to the broader knowledge base while continuing to develop practical solutions that drive real-world impact.
+            </p>
           </div>
-    </p>
+          
+          <div class="bg-light p-4 rounded mt-4" data-aos="fade-up" data-aos-delay="300">
+            <h5 class="mb-3">Core Competencies</h5>
+            <div class="row">
+              <div class="col-md-6">
+                <ul class="list-unstyled">
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Scalable Data Architecture</li>
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>ETL/ELT Pipeline Development</li>
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Machine Learning Engineering</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <ul class="list-unstyled">
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Statistical Modelling</li>
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Cloud Platforms (AWS, Snowflake)</li>
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Data Visualisation & Reporting</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Projects Section -->
-   
-<section id="projects" class="bg-light py-5" >
-  <div class="container">
-    <h2 class="text-center mb-5">Projects</h2>
-    <div class="row g-4">
+  <section id="projects" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title text-center d-block" data-aos="fade-up">Projects</h2>
+      <p class="text-center text-muted mb-5" data-aos="fade-up" data-aos-delay="100">
+        A selection of work demonstrating expertise across data engineering, machine learning, and research
+      </p>
+      
+      <div class="row g-4">
+        
+        <!-- Featured Project: Credit Risk Platform -->
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="card project-card featured h-100 shadow-sm">
+            <div class="card-body p-4">
+              <span class="badge bg-primary mb-2">Featured Project</span>
+              <h5 class="card-title">Credit Risk Intelligence Platform</h5>
+              <p class="text-muted small mb-3">
+                Production-Grade Data Platform · 2024-2025
+              </p>
+              <p class="card-text">
+                Designed and built a comprehensive data platform implementing <strong>medallion architecture</strong> (Bronze/Silver/Gold layers) for real-time credit risk assessment. The system integrates ensemble machine learning models (XGBoost, LightGBM, Neural Networks) with SHAP-based explainability, enabling stakeholders to understand not just what the model predicts, but why.
+              </p>
+              <p class="card-text">
+                Key engineering decisions included implementing a stacked meta-learner for optimal prediction accuracy, building automated feature engineering pipelines, and deploying via FastAPI with CI/CD automation. The architecture demonstrates end-to-end delivery from data ingestion to production serving.
+              </p>
+              <div class="mb-3">
+                <span class="tech-badge highlight">Snowflake</span>
+                <span class="tech-badge highlight">Delta Lake</span>
+                <span class="tech-badge">XGBoost</span>
+                <span class="tech-badge">LightGBM</span>
+                <span class="tech-badge">TensorFlow</span>
+                <span class="tech-badge">FastAPI</span>
+                <span class="tech-badge">SHAP</span>
+                <span class="tech-badge">CI/CD</span>
+              </div>
+              <a href="https://github.com/Karanm5" target="_blank" class="btn btn-outline-primary btn-sm">
+                <i class="bi bi-github me-1"></i> View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Featured Project: RL Trading Agent -->
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="card project-card featured h-100 shadow-sm">
+            <div class="card-body p-4">
+              <span class="badge bg-primary mb-2">Featured Project</span>
+              <h5 class="card-title">Reinforcement Learning Trading Agent</h5>
+              <p class="text-muted small mb-3">
+                Advanced ML · Custom Architecture · 2024-2025
+              </p>
+              <p class="card-text">
+                Developed a <strong>PPO-based reinforcement learning agent</strong> entirely in PyTorch, building custom policy and value networks from scratch rather than relying on pre-built libraries. The project demonstrates deep understanding of RL fundamentals and the ability to translate domain requirements into mathematical formulations.
+              </p>
+              <p class="card-text">
+                Engineered a novel <strong>risk-adjusted reward function</strong> that penalises drawdowns, volatility, and overtrading, promoting stable and profitable strategies. The system includes a custom Gymnasium environment with realistic portfolio constraints, transaction costs, and comprehensive backtesting pipelines with reproducible metrics.
+              </p>
+              <div class="mb-3">
+                <span class="tech-badge highlight">PyTorch</span>
+                <span class="tech-badge highlight">PPO Algorithm</span>
+                <span class="tech-badge">Gymnasium</span>
+                <span class="tech-badge">NumPy</span>
+                <span class="tech-badge">Custom Reward Engineering</span>
+              </div>
+              <a href="https://github.com/Karanm5" target="_blank" class="btn btn-outline-primary btn-sm">
+                <i class="bi bi-github me-1"></i> View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project: Real-Time Financial Pipeline -->
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="card project-card h-100 shadow-sm">
+            <div class="card-body p-4">
+              <h5 class="card-title">Real-Time Financial Data Pipeline</h5>
+              <p class="text-muted small mb-3">
+                Streaming Architecture · MLOps · 2024-2025
+              </p>
+              <p class="card-text">
+                Designed and built an end-to-end streaming pipeline for real-time financial data ingestion and processing. The system implements event-driven architecture using Apache Kafka for reliable message streaming, with automated evaluation pipelines and reproducible metrics throughout.
+              </p>
+              <p class="card-text">
+                The project demonstrates MLOps best practices: automated testing, monitoring, and deployment workflows that ensure model performance remains consistent from development through production.
+              </p>
+              <div class="mb-3">
+                <span class="tech-badge highlight">Apache Kafka</span>
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">Streaming</span>
+                <span class="tech-badge">MLOps</span>
+                <span class="tech-badge">Event-Driven</span>
+              </div>
+              <a href="https://github.com/Karanm5" target="_blank" class="btn btn-outline-primary btn-sm">
+                <i class="bi bi-github me-1"></i> View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project: Biomedical Pipeline -->
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="card project-card h-100 shadow-sm">
+            <div class="card-body p-4">
+              <h5 class="card-title">Biomedical Data Analytics Pipeline</h5>
+              <p class="text-muted small mb-3">
+                High-Dimensional Data · Research Grade · 2024
+              </p>
+              <p class="card-text">
+                Developed a comprehensive analytical pipeline for a complex biomedical dataset comprising <strong>49,000 rows and 1,250 features</strong>. The project required rigorous attention to data quality, validation, and documentation standards appropriate for research and regulated environments.
+              </p>
+              <p class="card-text">
+                Implemented systematic data validation including type checking, range validation, missing value handling, and cross-field consistency checks. Created full schema documentation and data lineage tracking to support reproducibility and governance requirements.
+              </p>
+              <div class="mb-3">
+                <span class="tech-badge highlight">Python</span>
+                <span class="tech-badge">SQL</span>
+                <span class="tech-badge">Data Validation</span>
+                <span class="tech-badge">Documentation</span>
+                <span class="tech-badge">High-Dimensional Analysis</span>
+              </div>
+              <a href="https://github.com/Karanm5" target="_blank" class="btn btn-outline-primary btn-sm">
+                <i class="bi bi-github me-1"></i> View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project: DROPS -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+          <div class="card project-card h-100 shadow-sm">
+            <div class="card-body p-4">
+              <h5 class="card-title">DROPS: Cloud Security Architecture</h5>
+              <p class="text-muted small mb-3">
+                NSIT · Supervisor: Dr. Amarjit
+              </p>
+              <p class="card-text">
+                Designed a methodology for fragmenting and distributing data across multiple cloud nodes, where each node holds only a single fragment. This architecture ensures enhanced security through data distribution, fault tolerance through redundancy, and optimised system performance.
+              </p>
+              <div class="mb-3">
+                <span class="tech-badge">Cloud Architecture</span>
+                <span class="tech-badge">Security</span>
+                <span class="tech-badge">Distributed Systems</span>
+              </div>
+              <a href="https://github.com/Karanm5/File-Spilitting-DROPS-" target="_blank" class="btn btn-outline-primary btn-sm">
+                <i class="bi bi-github me-1"></i> View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project: Computer Vision -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+          <div class="card project-card h-100 shadow-sm">
+            <div class="card-body p-4">
+              <h5 class="card-title">Real-Time Motion Detection System</h5>
+              <p class="text-muted small mb-3">
+                NSIT · Supervisor: Dr. Vikas Maheshkar
+              </p>
+              <p class="card-text">
+                Built a computer vision system using OpenCV that detects motion and identifies individuals in real-time video streams. Events are timestamped and visualised with dynamic graphs, applicable to smart surveillance and anomaly detection use cases.
+              </p>
+              <div class="mb-3">
+                <span class="tech-badge">OpenCV</span>
+                <span class="tech-badge">Computer Vision</span>
+                <span class="tech-badge">Real-Time Processing</span>
+              </div>
+              <a href="https://github.com/Karanm5/Computer-Vision-old-program-" target="_blank" class="btn btn-outline-primary btn-sm">
+                <i class="bi bi-github me-1"></i> View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project: Dissertation -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="700">
+          <div class="card project-card h-100 shadow-sm">
+            <div class="card-body p-4">
+              <span class="badge bg-success mb-2">Distinction</span>
+              <h5 class="card-title">Superconductivity and Disorder</h5>
+              <p class="text-muted small mb-3">
+                MSc Dissertation · Aston University<br>
+                Supervisor: Prof. Igor Yurkevich
+              </p>
+              <p class="card-text">
+                Investigated the impact of disorder on superconductors' critical temperatures using stochastic ML models. Created synthetic datasets simulating random versus structured conditions, applying Monte Carlo simulation and VAEs to analyse thermal behaviour.
+              </p>
+              <div class="mb-3">
+                <span class="tech-badge">Machine Learning</span>
+                <span class="tech-badge">Monte Carlo</span>
+                <span class="tech-badge">VAEs</span>
+                <span class="tech-badge">arXiv (Prep)</span>
+              </div>
+              <div class="d-flex gap-2 flex-wrap">
+                <a href="files/Karan_230293944_Final_dissertation.pdf" class="btn btn-outline-primary btn-sm" download>
+                  <i class="bi bi-file-pdf me-1"></i> Dissertation
+                </a>
+                <a href="https://github.com/Karanm5/Superconductivity-and-Disorder" target="_blank" class="btn btn-outline-dark btn-sm">
+                  <i class="bi bi-github me-1"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
 
-      <!-- Project 1: Dissertation -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">Dissertation: Superconductivity and Disorder</h5>
-            <p class="text-muted">
-              Aston University | 2024<br>
-              <strong>Supervisor:</strong> Professor Igor Yurkevich<br>
-              <span class="badge bg-success mt-1">Distinction Achieved</span>
-            </p>
-            <p class="card-text">
-              Investigated the impact of disorder on superconductors critical temperatures using stochastic ML models. 
-              Created datasets simulating random vs. structured conditions to analyze thermal behavior.
-            </p>
-            <a href="files/Karan_230293944_Final_dissertation.pdf" class="btn btn-outline-primary btn-sm me-2" download>
-              <i class="bi bi-file-earmark-pdf"></i> dissertation file
-            </a>
-            <a href="https://github.com/Karanm5/Superconductivity-and-Disorder" target="_blank" class="btn btn-outline-dark btn-sm">
-              <i class="bi bi-github"></i> View on github
-            </a>
+  <!-- Certifications Section -->
+  <section id="certifications" class="py-5">
+    <div class="container">
+      <h2 class="section-title text-center d-block" data-aos="fade-up">Certifications</h2>
+      <p class="text-center text-muted mb-5" data-aos="fade-up" data-aos-delay="100">
+        Continuous learning across data engineering, cloud platforms, and ML operations
+      </p>
+      
+      <div class="row g-3 justify-content-center" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="certification-badge">
+            <i class="bi bi-snow2 text-primary fs-2 mb-2"></i>
+            <div class="small fw-bold">Snowflake</div>
+            <div class="small text-muted">Data Engineering</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="certification-badge">
+            <i class="bi bi-cloud text-warning fs-2 mb-2"></i>
+            <div class="small fw-bold">AWS</div>
+            <div class="small text-muted">Cloud Essentials</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="certification-badge">
+            <i class="bi bi-diagram-3 text-info fs-2 mb-2"></i>
+            <div class="small fw-bold">Airflow & Kafka</div>
+            <div class="small text-muted">IBM</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="certification-badge">
+            <i class="bi bi-gear text-success fs-2 mb-2"></i>
+            <div class="small fw-bold">DevOps/MLOps</div>
+            <div class="small text-muted">Fundamentals</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="certification-badge">
+            <i class="bi bi-robot text-danger fs-2 mb-2"></i>
+            <div class="small fw-bold">LLMs</div>
+            <div class="small text-muted">Google</div>
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Project 2: DROPS -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">Security and Performance Optimization in Cloud Data Storage</h5>
-            <p class="text-muted">
-              Netaji Subhas Institute of Technology<br>
-              <strong>Supervisor:</strong> Dr. Amarjit
-            </p>
-            <p class="card-text">
-              Introduced <strong>DROPS</strong>—a methodology for fragmenting and distributing data across multiple cloud nodes. 
-              Each node holds only a single fragment, ensuring enhanced security, fault tolerance, and optimized system performance.
-            </p>
-            <a href="https://github.com/Karanm5/File-Spilitting-DROPS-" target="_blank" class="btn btn-outline-primary">
-              View on GitHub
-            </a>
+  <!-- Research & Recommendations Section -->
+  <section id="research" class="py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 mb-4" data-aos="fade-up">
+          <h2 class="section-title">Research</h2>
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <h5>arXiv Publication (In Preparation)</h5>
+              <p class="text-muted">Machine Learning for Superconductivity and Disorder</p>
+              <p>
+                Currently preparing my MSc dissertation research for academic publication on arXiv. The work investigates the application of machine learning methodologies, including Random Forest, Gaussian Process Regression, and Variational Autoencoders, to predict superconductor properties under disordered conditions.
+              </p>
+              <p class="small text-muted mb-0">
+                <strong>Supervisor:</strong> Prof. Igor Yurkevich, Aston University
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <h2 class="section-title">Recommendations</h2>
+          <div class="d-flex flex-column gap-3">
+            <div class="card shadow-sm">
+              <div class="card-body p-3">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <h6 class="mb-0">Prof. Igor Yurkevich</h6>
+                    <small class="text-muted">Associate Professor, Aston University</small>
+                  </div>
+                  <a href="files/Ref_Letter_230293944_Igor.pdf" class="btn btn-outline-primary btn-sm" download>
+                    <i class="bi bi-file-text"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="card shadow-sm">
+              <div class="card-body p-3">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <h6 class="mb-0">Dr. Philip Trevelyan</h6>
+                    <small class="text-muted">Lecturer, Aston University</small>
+                  </div>
+                  <a href="files/Ref_Letter_230293944_by_Philip.pdf" class="btn btn-outline-primary btn-sm" download>
+                    <i class="bi bi-file-text"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="card shadow-sm">
+              <div class="card-body p-3">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <h6 class="mb-0">Dr. Amarjit</h6>
+                    <small class="text-muted">Associate Professor, NSIT</small>
+                  </div>
+                  <a href="files/lor academic.pdf" class="btn btn-outline-primary btn-sm" download>
+                    <i class="bi bi-file-text"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
-      <!-- Project 3: OpenCV Motion Detection -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">Real-Time Motion Detection & Person Identification</h5>
-            <p class="text-muted">
-              Netaji Subhas Institute of Technology<br>
-              <strong>Supervisor:</strong> Dr. Vikas Maheshkar
-            </p>
-            <p class="card-text">
-              Built with <strong>OpenCV</strong>, this system detects motion and identifies individuals in real-time video streams. 
-              Events are timestamped and visualized with dynamic graphs, making it ideal for smart surveillance and anomaly detection.
-            </p>
-            <a href="https://github.com/Karanm5/Computer-Vision-old-program-" target="_blank" class="btn btn-outline-primary">
-              View on GitHub
-            </a>
-          </div>
-        </div>
-      </div>
-
-    </div> <!-- /.row -->
-  </div> <!-- /.container -->
-</section>
-
-
-
-<!-- Recommendation Letters Section -->
-<section id="recommendations" class="py-5 bg-white">
-  <div class="container">
-    <h2 class="text-center mb-5">Recommendation Letters</h2>
-    <div class="row g-4">
-
-      <!-- Professor 1 -->
-      <div class="col-md-6">
-        
-          <div class="card-body">
-            <h5 class="card-title">Prof. Igor Yurkevich</h5>
-            <p class="text-muted">Associate Professor, Aston University</p>
-            
-            <a href="files/Ref_Letter_230293944_Igor.pdf" class="btn btn-outline-primary btn-sm" download>
-              <i class="bi bi-file-earmark-text"></i> View Letter
-            </a>
-          </div>
-        
-      </div>
-
-      <!-- Professor 2 -->
-      <div class="col-md-6">
-        
-          <div class="card-body">
-            <h5 class="card-title">Dr. Philip Trevelyan</h5>
-            <p class="text-muted">Lecturer, Aston University</p>
-            
-            <a href="files/Ref_Letter_230293944_by_Philip.pdf" class="btn btn-outline-primary btn-sm" download>
-              <i class="bi bi-file-earmark-text"></i> View Letter
-            </a>
-          </div>
-        
-      </div>
-
-      <!-- Professor 2 -->
-      <div class="col-md-6">
-        
-          <div class="card-body">
-            <h5 class="card-title">Dr. Amarjit</h5>
-            <p class="text-muted">Associate Professor, NSIT</p>
-            
-            <a href="files/lor academic.pdf" class="btn btn-outline-primary btn-sm" download>
-              <i class="bi bi-file-earmark-text"></i> View Letter
-            </a>
-          </div>
-        
-      </div>
-
-    </div> <!-- /.row -->
-  </div> <!-- /.container -->
-</section>
-
-
+    </div>
+  </section>
 
   <!-- Contact Section -->
-<section id="contact" class="py-5">
-  <div class="container text-center">
-    <h2>Contact</h2>
-    <p>You can email me at <a href="mailto:meena.karan9k@gmail.com">Gmail</a></p>
-
-    <div class="mt-4 d-flex justify-content-center flex-wrap gap-3">
-      <a href="https://www.linkedin.com/in/karan-th/" target="_blank" class="btn btn-outline-primary">
-        <i class="bi bi-linkedin"></i> LinkedIn
-      </a>
-      <a href="https://github.com/Karanm5" target="_blank" class="btn btn-outline-dark">
-        <i class="bi bi-github"></i> GitHub
-      </a>
-      <a href="files/Karan_CV.pdf" class="btn btn-outline-success" download>
-        <i class="bi bi-file-earmark-arrow-down"></i> Download CV
-      </a>
+  <section id="contact" class="py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 text-center" data-aos="fade-up">
+          <h2 class="section-title d-inline-block">Get in Touch</h2>
+          <p class="text-muted mt-4 mb-4">
+            I am currently seeking opportunities in data engineering, machine learning, and analytics. 
+            Available immediately with full UK work authorisation.
+          </p>
+          <div class="d-flex justify-content-center flex-wrap gap-3">
+            <a href="mailto:meena.karan9k@gmail.com" class="btn btn-gradient">
+              <i class="bi bi-envelope me-2"></i>Email Me
+            </a>
+            <a href="https://www.linkedin.com/in/karan-th/" target="_blank" class="btn btn-outline-primary">
+              <i class="bi bi-linkedin me-2"></i>LinkedIn
+            </a>
+            <a href="https://github.com/Karanm5" target="_blank" class="btn btn-outline-dark">
+              <i class="bi bi-github me-2"></i>GitHub
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
- <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-3">
-    <p class="mb-0">&copy; 2025 KARAN. All rights reserved.</p>
+  <!-- Footer -->
+  <footer class="text-white text-center py-4">
+    <div class="container">
+      <p class="mb-2">© 2026 Karan. All rights reserved.</p>
+      <p class="small text-muted mb-0">Data Engineer · ML Practitioner · Researcher</p>
+    </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
 </body>
 </html>
