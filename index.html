@@ -376,7 +376,40 @@
           </div>
         </div>
 
-        
+        <!-- Featured Project: UK Higher Education Analytics -->
+<div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+  <div class="card project-card featured h-100 shadow-sm">
+    <div class="card-body p-4">
+      <span class="badge bg-primary mb-2">Featured Project</span>
+      <h5 class="card-title">UK Higher Education Analytics Platform</h5>
+      <p class="text-muted small mb-3">
+        End-to-End Analytical Data Platform · 2026
+      </p>
+      <p class="card-text">
+        Designed and built a production-grade analytical data platform covering <strong>30 UK higher education providers across 10 academic years</strong> of enrolment and degree classification data. The pipeline implements a full ETL workflow with Pandera schema validation, a star-schema dimensional model in DuckDB, and six SQL analytical views using window functions for year-on-year trend analysis.
+      </p>
+      <p class="card-text">
+        Key engineering decisions included choosing DuckDB for its native columnar window function support, enforcing explicit schema contracts to catch data quality issues before they propagate downstream, and designing a six-page interactive dashboard segmented by study level, domicile, subject group, and region — built for non-technical stakeholders. Maintained via GitHub Actions CI with 15 automated pytest tests covering the full pipeline.
+      </p>
+      <div class="mb-3">
+        <span class="tech-badge highlight">DuckDB</span>
+        <span class="tech-badge highlight">Pandera</span>
+        <span class="tech-badge">Python</span>
+        <span class="tech-badge">pandas</span>
+        <span class="tech-badge">SQL</span>
+        <span class="tech-badge">Streamlit</span>
+        <span class="tech-badge">Plotly</span>
+        <span class="tech-badge">CI/CD</span>
+      </div>
+      <a href="https://github.com/Karanm5/uk-he-analytics" target="_blank" class="btn btn-outline-primary btn-sm me-2">
+        <i class="bi bi-github me-1"></i> View on GitHub
+      </a>
+      <a href="https://uk-he-analytics-amxa6dtqz8n3tqy645hxxc.streamlit.app/" target="_blank" class="btn btn-outline-success btn-sm">
+        <i class="bi bi-box-arrow-up-right me-1"></i> Live Dashboard
+      </a>
+    </div>
+  </div>
+</div>
         
         <!-- Project: Real-Time Financial Pipeline -->
         <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
