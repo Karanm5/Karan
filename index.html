@@ -346,6 +346,53 @@
             </div>
           </div>
         </div>
+
+        <!-- Featured Project: ARGUS -->
+<div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+  <div class="card project-card featured h-100 shadow-sm">
+    <div class="card-body p-4">
+      <span class="badge bg-primary mb-2">Featured Project</span>
+      <h5 class="card-title">ARGUS — Adaptive Reasoning with Guided Uncertainty Sampling</h5>
+      <p class="text-muted small mb-3">
+        Multi-Agent LLM System · Deployed · 2026
+      </p>
+      <p class="card-text">
+        Designed and built a self-auditing multi-agent LLM reasoning system implementing
+        <strong>semantic entropy-based uncertainty quantification</strong> (Kuhn et al., ICLR 2023).
+        Rather than trusting a single model response, ARGUS samples the LLM multiple times,
+        clusters responses in embedding space using agglomerative clustering, and computes
+        Shannon entropy over the cluster distribution — routing to an extended reasoning loop
+        when epistemic uncertainty exceeds a calibrated threshold.
+      </p>
+      <p class="card-text">
+        The pipeline comprises five specialised agents (Planner, Retriever, Reasoner, Critic,
+        Synthesis) orchestrated via a <strong>LangGraph StateGraph</strong> with conditional
+        edges. The Critic performs a six-dimension rubric audit — scoring logical coherence,
+        factual grounding, completeness, calibration, relevance, and conciseness — before a
+        final calibrated answer is synthesised. Deployed live with a FastAPI backend, Streamlit
+        dashboard, Docker image published to GHCR, and full CI/CD via GitHub Actions.
+      </p>
+      <div class="mb-3">
+        <span class="tech-badge highlight">LangGraph</span>
+        <span class="tech-badge highlight">LLaMA 3.3-70B</span>
+        <span class="tech-badge">ChromaDB</span>
+        <span class="tech-badge">sentence-transformers</span>
+        <span class="tech-badge">FastAPI</span>
+        <span class="tech-badge">Streamlit</span>
+        <span class="tech-badge">Docker</span>
+        <span class="tech-badge">CI/CD</span>
+      </div>
+      <div class="d-flex gap-2">
+        <a href="https://github.com/Karanm5/Argus" target="_blank" class="btn btn-outline-primary btn-sm">
+          <i class="bi bi-github me-1"></i> View on GitHub
+        </a>
+        <a href="YOUR_STREAMLIT_URL_HERE" target="_blank" class="btn btn-primary btn-sm">
+          <i class="bi bi-box-arrow-up-right me-1"></i> Live Demo
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
         
         <!-- Featured Project: RL Trading Agent -->
         <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
